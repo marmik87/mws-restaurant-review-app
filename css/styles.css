@@ -39,7 +39,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-	width: 100vm;
+	width: 100%;
 }
 #footer {
   background-color: #444;
@@ -77,13 +77,11 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: 100%;
 }
 
 /* Display list items side by side */
 #breadcrumb li {
     display: inline;
-		width: 100%
 }
 
 /* Add a slash symbol (/) before/behind each list item */
@@ -209,7 +207,7 @@ nav h1 a {
   position: fixed;
   /*right: 0; */
   top: 80px;
-  width: 100%;
+  width: 90%;
 }
 .inside #map {
   background-color: #ccc;
@@ -255,7 +253,6 @@ nav h1 a {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 30px 40px 30px;
-  width: 100%;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -270,6 +267,9 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 }
 #reviews-list li {
   background-color: #fff;
@@ -299,9 +299,9 @@ nav h1 a {
 	}
 }
 
-@media screen and (min-width: 1024px) {
+/*@media screen and (min-width: 1024px) {
 	#reviews-list {
 		display: flex;
 		flex-direction: row;
 	}
-}
+} */
