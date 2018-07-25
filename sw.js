@@ -1,10 +1,14 @@
 /* as taught at Wittr App */
 
-var staticCacheName = 'restaurant-review-v5';
+/**
+ * Opening New cache
+ */
+
+var staticCacheName = 'restaurant-review-v8';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('staticCacheName').then(function(cache) {
+    caches.open(staticCacheName).then(function(cache) {
       return cache.addAll([
         '/',
         '/restaurant.html',
@@ -19,6 +23,10 @@ self.addEventListener('install', function(event) {
     })
   );
 });
+
+/**
+ *Activating New Cache and Deleting the older version(s)
+ */
 
 self.addEventListener('activate', function(event) {
   event.waitUntil(
@@ -35,9 +43,13 @@ self.addEventListener('activate', function(event) {
   );
 });
 
+/**
+ * Respond with Cache
+ */
+
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request, {ignoreSearch: true}).then(function(response) {
       return response || fetch(event.request);
     })
   );
