@@ -305,3 +305,15 @@ nav h1 a {
 		flex-direction: row;
 	}
 } */
+
+/* ------ Skip the map -------*/
+/* https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ */
+a.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}

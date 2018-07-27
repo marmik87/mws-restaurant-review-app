@@ -18,13 +18,14 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container" aria-label="map-of-restaurants" aria-role="application" tabindex="-1">
+    <a class="skip-main" href="#neighborhoods-select"><h1>Next is map - skip to filtering</h1></a>
+    <section id="map-container" aria-label="map-of-restaurants" aria-role="application">
       <div id="map"></div>
     </section>
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="choose-neighborhood" aria-haspopup="listbox">
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="choose-neighborhood" aria-haspopup="listbox" tabindex="-1">
           <option value="all">All Neighborhoods</option>
         </select>
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="choose-cuisine" aria-haspopup="listbox">
